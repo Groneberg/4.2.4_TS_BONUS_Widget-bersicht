@@ -13,6 +13,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           title: Text('Aufgabe 1'),
@@ -99,6 +100,7 @@ class MainApp extends StatelessWidget {
               icon: Icons.face,
               fontSize: 64,
               color: Colors.black,
+
             ),
           ],
         ),
