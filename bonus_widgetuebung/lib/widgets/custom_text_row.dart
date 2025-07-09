@@ -1,13 +1,13 @@
 // lib/widgets/custom_text_row.dart
 import 'package:flutter/material.dart';
 
-class TextRow extends StatelessWidget {
+class CustomTextRow extends StatelessWidget {
   final String title;
   final double fontSize;
   final FontWeight fontWeight;
   final Color color;
 
-  const TextRow({
+  const CustomTextRow({
     super.key,
     this.title = 'Hello App Akademie!',
     this.fontSize = 24.0,
@@ -19,8 +19,6 @@ class TextRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      // In diesem Beispiel wird nur ein Text angezeigt, daher keine Notwendigkeit für mainAxisAlignment.
-      // Falls mehrere Kinder mit Spacing benötigt würden, siehe Szenario 3.
       children: [
         Padding(
           padding: const EdgeInsets.all(8.0),

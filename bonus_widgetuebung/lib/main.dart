@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:bonus_widgetuebung/widgets/custom_text_row.dart' ;
+import 'package:bonus_widgetuebung/widgets/custom_container.dart';
+import 'package:bonus_widgetuebung/widgets/custom_icon_row.dart';
 
 void main() {
   runApp(const MainApp());
@@ -19,110 +22,83 @@ class MainApp extends StatelessWidget {
         body: Column(
           children: [
             SizedBox(height: 24),
-            Row(
-              spacing: 16,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'Hello App Akademie!',
-                    style: TextStyle(
-                      fontSize: 24,
-                      color: Colors.blue,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ],
+            CustomTextRow(
+              title: 'Hello App Akademie!',
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+              color: Colors.blue,
+            ),
+            SizedBox(height: 24),
+            CustomTextRow(
+              title: 'Hello App Akademie!',
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+              color: Colors.blue,
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
                 spacing: 16,
                 children: [
-                  Container(
-                    width: 100,
-                    height: 100,
+                  CustomContainer(
+                    text: 'A',
                     color: Colors.redAccent.shade700,
-                    child: Center(
-                      child: Container(
-                        width: 50,
-                        height: 25,
-                        decoration: BoxDecoration(
-                          color: Colors.purple,
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Center(
-                          child: Text('A',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
                     width: 100,
                     height: 100,
+                  ),
+                  CustomContainer(
+                    text: 'B',
                     color: Colors.greenAccent.shade700,
-                    child: Center(
-                      child: Container(
-                        width: 50,
-                        height: 25,
-                        decoration: BoxDecoration(
-                          color: Colors.purple,
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Center(
-                          child: Text('B',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
                     width: 100,
                     height: 100,
+                  ),
+                  CustomContainer(
+                    text: 'C',
                     color: Colors.blueAccent.shade700,
-                    child: Center(
-                      child: Container(
-                        width: 50,
-                        height: 25,
-                        decoration: BoxDecoration(
-                          color: Colors.purple,
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Center(
-                          child: Text('C',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  )
+                    width: 100,
+                    height: 100,
+                  ),    
                 ],
               ),
             ),
             SizedBox(height: 16),
-            Row(
-              // spacing: 16,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Icon(Icons.face, size: 64,),
-                Icon(Icons.face, size: 64,),
-              ],
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                spacing: 16,
+                children: [
+                  CustomContainer(
+                    text: 'A',
+                    color: Colors.redAccent.shade700,
+                    width: 100,
+                    height: 100,
+                  ),
+                  CustomContainer(
+                    text: 'B',
+                    color: Colors.greenAccent.shade700,
+                    width: 100,
+                    height: 100,
+                  ),
+                  CustomContainer(
+                    text: 'C',
+                    color: Colors.blueAccent.shade700,
+                    width: 100,
+                    height: 100,
+                  ),    
+                ],
+              ),
+            ),
+            SizedBox(height: 16),
+            CustomIconRow(
+              icon: Icons.face,
+              fontSize: 64,
+              color: Colors.black,
+            ),
+            SizedBox(height: 16),
+            CustomIconRow(
+              icon: Icons.face,
+              fontSize: 64,
+              color: Colors.black,
             ),
           ],
         ),
